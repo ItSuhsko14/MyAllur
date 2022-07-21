@@ -24,10 +24,6 @@ html(lang='uk')
 			-
 		script(src='https://kit.fontawesome.com/d52f45beee.js' crossorigin='anonymous')
 
-
-
-
-
 body
 
 	header#header
@@ -75,8 +71,9 @@ body
 			.col.text-center
 				img(src='img/main-photo.jpg' alt='main-photo allur' class='img-fluid d-block mx-auto')
 
+
 	.container.p-0.mb-2
-		.row.gx-1
+		.row.gx-1.op
 			.col
 				img(class='img-fluid' src='img/horse-allur400x300.jpg' alt='Аллюр')
 			.col
@@ -88,40 +85,35 @@ body
 			.col
 				img(class='img-fluid' src='img/horse-plyama400x300.jpg' alt='Пляма')
 			.col
-				img(class='img-fluid' src='img/horse-verhovina400x300.jpg' alt='Верховина') 
+				img(class='img-fluid' src='img/horse-verhovina400x300.jpg' alt='Верховина')
+
+- var menu = [{src: 'img/training.jpg', text: 'тренування'},{src: 'img/svyata.jpg', text: 'кінне шоу та свята'},{src: 'img/photosession.jpg', text: 'фотосессії та зйомки кліпів'},{src: 'img/progulki.jpg', text: 'кінні прогулянки та походи'},{src: 'img/sertificate.jpg', text: 'сертифікати'},{src: 'img/price.jpg', text: 'прайс'}]
+
+.container
+	.row
+		each el in menu
+			.col-6.col-md-4.container-menu.p-0
+				img(class='img-fluid img-menu' src=el.src)
+				span.text-top
+					h1
+						|#{el.text}
 
 	
-	.container.mb-2.d-none
-		.row
-			.col-6.col-md-4(style='background-color:red')
-				| тренування та катання з елементами іпотерапії
-			.col-6.col-md-4(style='background-color:orange')
-				| кінні прогулянки та походи
-			.col-6.col-md-4(style='background-color:brown')
-				| фотосессії та зйомки кліпів
-			.col-6.col-md-4(style='background-color:yellow')
-				| кінне шоу та свята
-			.col-6.col-md-4(style='background-color:green')
-				| сертифікати
-			.col-6.col-md-4(style='background-color:blue')
-				| прайс
-
-
 	.container
 		.row
-			.col.col-sm-12.col-lg-6
+			.col-12.col-sm-12.col-lg-3
 				.row.h4.mt-3
 					| Контакти:	
 				.row
-					| Адміністратор 
-					| (066) 720 08 46
+					| Адміністратор: <br>
+					| (066) 720 08 46 <br>
 					| (063) 873 90 18
 				.row
-					| Тренер:
-					| (098) 429 68 85
+					| Тренер: <br>
+					| (098) 429 68 85 <br>
 					| (095) 424 77 53
 
-			.col.col-sm-12.col-lg-6
+			.col-12.col-sm-12.col-lg-9
 				.row.h4.mt-3
 					| Місцеположення:
 				.row
@@ -131,4 +123,5 @@ body
 
 	// JavaScript Bundle with Popper from bootstrap
 	script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+
 
