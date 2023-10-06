@@ -1,0 +1,6 @@
+- var menu = [{src: 'img/sertificate1.jpg', text: 'сертифікат Аллюр', href: 'training.html'},{src: 'img/sertificate2.jpg', text: 'сертифікат Аллюр', href: 'svyata.html'},{src: 'img/sertificate3.jpg', text: 'сертифікат Аллюр', href: 'photosession.html'}]
+.container
+    .row
+        each el in menu
+            .col-6.col-md-4.container-menu.p-0
+                img(class='img-fluid img-menu' src=el.src)

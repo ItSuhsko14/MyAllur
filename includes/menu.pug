@@ -1,0 +1,10 @@
+- var menu = [{src: 'img/training.jpg', text: 'тренування', href: 'training.html'},{src: 'img/svyata.jpg', text: 'кінне шоу та свята', href: 'svyata.html'},{src: 'img/photosession.jpg', text: 'фотосессії та зйомки кліпів', href: 'photosession.html'},{src: 'img/progulki.jpg', text: 'кінні прогулянки та походи', href: 'progulyanky.html'},{src: 'img/sertificate.jpg', text: 'сертифікати', href: 'sertificat.html'},{src: 'img/price.jpg', text: 'прайс', href: 'price.html'}]
+
+.container
+	.row
+		each el in menu
+			.col-6.col-md-4.container-menu.p-0
+				a(href=el.href)
+					img(class='img-fluid img-menu' src=el.src)
+					span.text-top
+						|#{el.text}

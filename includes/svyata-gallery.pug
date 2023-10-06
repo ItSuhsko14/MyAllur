@@ -1,0 +1,9 @@
+- var menu = [{src: 'img/svyata/svyato1.jpg', text: '', href: 'training.html'},{src: 'img/svyata/svyato2.jpg', text: '', href: 'svyata.html'},{src: 'img/svyata/svyato3.jpg', text: '', href: 'photosession.html'},{src: 'img/svyata/svyato4.jpg', text: '', href: 'progulyanky.html'},{src: 'img/svyata/svyato5.jpg', text: '', href: 'sertificat.html'},{src: 'img/svyata/svyato6.jpg', text: '', href: 'price.html'}]
+
+.container
+	.row
+		each el in menu
+			.col-6.col-md-4.container-menu.p-0
+				img(class='img-fluid img-menu' src=el.src)
+					span.text-top
+						|#{el.text}
